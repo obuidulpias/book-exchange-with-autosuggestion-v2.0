@@ -1,13 +1,13 @@
-# User Role Permission
+# An Online Book Exchange System with Automatic Suggestions
 
-A simple user role management system by using two packages - Spatie and Passport. Spatie use for assigning role permission to user and Passport use for user authentication. And I follow repository design pattern to give good architect.
+An Online Book Exchange System with Automatic Suggestions is a web application which is for students, book lovers and all who need books. Users can exchange their extra/unnecessary books with other users and users can also buy books.
 
 ## Installation
 
 Use this line to cloning your project
 
 ```bash
-git clone https://github.com/obuidulpias/user-role-management-system.git
+git clone
 ```
 
 Install Composer Dependencies
@@ -19,7 +19,7 @@ composer install
 Create a .env file if it does not already exist. You can copy the .env.example
 
 ```bash
-DB_DATABASE=user_role
+DB_DATABASE=
 ```
 
 Generate an Application Key
