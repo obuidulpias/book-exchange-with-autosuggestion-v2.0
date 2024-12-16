@@ -1,0 +1,40 @@
+<?php
+
+namespace App\Http\Requests\Auth;
+
+use Illuminate\Foundation\Http\FormRequest;
+
+class SignupRequest extends FormRequest
+{
+    /**
+     * Determine if the user is authorized to make this request.
+     */
+    public function authorize(): bool
+    {
+        return true;
+    }
+
+    /**
+     * Get the validation rules that apply to the request.
+     *
+     * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array<mixed>|string>
+     */
+    public function rules(): array
+    {
+        return [
+            'name' => 'required|string',
+            'email' => 'required|string|email|unique:users',
+            'password' => 'min:6|required_with:confirm_password|same:confirm_password',
+            'confirm_password' => ['required', 'string', 'min:6'],
+
+        ];
+    }
+    public function messages(): array
+    {
+        return [
+            'email.required' => 'Please enter the registered email address',
+            'email.email' => 'Please enter a valid email address',
+            'password.required' => 'Please enter your password',
+        ];
+    }
+}
